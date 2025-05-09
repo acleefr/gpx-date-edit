@@ -63,4 +63,4 @@ Le nouveau fichier `.gpx` est propre :
 
 ## 🧔 Auteur
 
-Arthur, product owner et surfeur breton 🌊  
+Aclee, runner du dimanche
