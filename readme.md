@@ -1,30 +1,31 @@
 # 🏃 GPX Date Modifier
 
-Ce script Python permet de **changer uniquement la date** des balises `<time>` dans un fichier `.gpx`, tout en conservant **les heures et les coordonnées GPS** intactes. Idéal pour recaler une trace GPS à un autre jour (ex. pour Strava ou Garmin).
+This Python script allows you to **change only the date** of `<time>` tags in a `.gpx` file, while keeping **the time of day and GPS coordinates** untouched. Perfect for adjusting a GPS track to another day (e.g., for Strava or Garmin).
 
 ---
 
-## 🔧 Fonctionnalités
+## 🔧 Features
 
-- Conserve les heures (`hh:mm:ss`) originales
-- Ne modifie ni les coordonnées ni les autres métadonnées
-- Nettoie le namespace XML pour garder des balises propres (pas de `ns0:`)
-- Génère un nouveau fichier `.gpx` propre et prêt à l'emploi
+* Keeps original times (`hh:mm:ss`)
+* Does not alter coordinates or other metadata
+* Cleans up the XML namespace (no `ns0:` tags)
+* Generates a clean, ready-to-use `.gpx` file
 
 ---
 
-## 📦 Utilisation
+## 📦 How to Use
 
-### 1. Installer Python (si ce n’est pas déjà fait)
-Assure-toi d’avoir Python 3.6+ installé.
+### 1. Install Python (if not already installed)
 
-### 2. Lancer le script
+Make sure you have Python 3.6+ installed.
+
+### 2. Run the script
 
 ```bash
 python change_gpx_date.py
 ```
 
-Tu peux aussi l’utiliser en modifiant les dernières lignes du script avec le nom du fichier GPX original, celui de sortie, et la nouvelle date :
+You can also use it by editing the last lines of the script with the original GPX filename, the output filename, and the new date:
 
 ```python
 change_gpx_date("bzh.gpx", "1804.gpx", "2025-04-18")
@@ -32,35 +33,38 @@ change_gpx_date("bzh.gpx", "1804.gpx", "2025-04-18")
 
 ---
 
-## 📝 Exemple
+## 📝 Example
 
-Si ton fichier d'origine contient :
+If your original file contains:
+
 ```xml
 <time>2023-07-22T09:30:00Z</time>
 ```
 
-Et que tu passes `"2025-04-18"` comme nouvelle date, tu obtiendras :
+And you pass `"2025-04-18"` as the new date, you'll get:
+
 ```xml
 <time>2025-04-18T09:30:00Z</time>
 ```
 
 ---
 
-## 🧼 Résultat
+## 🧼 Result
 
-Le nouveau fichier `.gpx` est propre :
-- Pas de balises avec `ns0:` 
-- Compatible avec toutes les plateformes GPS
+The new `.gpx` file will be clean:
 
----
-
-## 📁 Fichiers
-
-- `change_gpx_date.py` → Le script Python
-- `README.md` → Ce fichier d'explication
+* No `ns0:` tags
+* Fully compatible with all GPS platforms
 
 ---
 
-## 🧔 Auteur
+## 📁 Files
 
-Aclee, runner du dimanche
+* `change_gpx_date.py` → The Python script
+* `README.md` → This documentation file
+
+---
+
+## 🧔 Author
+
+Aclee, Sunday runner
